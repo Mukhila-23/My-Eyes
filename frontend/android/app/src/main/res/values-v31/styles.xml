@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Android 12+ (API 31) and newer use the platform SplashScreen API and IGNORE
+  android:windowBackground for the launch screen. Without this override the
+  system derives the splash colour from the theme's colourBackground, which for a
+  Flutter activity defaults to the light system colour - producing the bright
+  startup window users reported.
+
+  Explicitly declaring the same dark colour used by the Flutter
+  AppTheme.background keeps the native splash, the launch window, and the first
+  Flutter frame identical.
+-->
+<resources>
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowSplashScreenBackground">@color/launch_background</item>
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@color/launch_background</item>
+        <item name="android:windowSplashScreenBackground">@color/launch_background</item>
+    </style>
+</resources>

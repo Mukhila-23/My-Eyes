@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Launch window background.
+
+  The app background is #070A12 (AppTheme.background). It is declared here as a
+  literal because a launch drawable cannot reference a Dart constant, and having
+  the two drift apart is what produced the jarring white flash on startup.
+
+  Previously this was @android:color/white, which combined with the Light
+  NoTitleBar launch theme to flash white before the dark Flutter splash
+  appeared.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/launch_background" />
+</layer-list>

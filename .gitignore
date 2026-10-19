@@ -1,0 +1,88 @@
+# Environment variables and secrets
+
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+
+.venv/
+venv/
+env/
+
+# Python cache files
+
+**pycache**/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Flutter and Dart generated files
+
+frontend/.dart_tool/
+frontend/build/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.packages
+frontend/.pub-cache/
+
+# Android generated files
+
+frontend/android/.gradle/
+frontend/android/local.properties
+frontend/android/key.properties
+frontend/android/app/debug/
+frontend/android/app/profile/
+
+# IDE settings
+
+.idea/
+.vscode/
+
+# Logs and temporary files
+
+*.log
+*.tmp
+
+# Operating system files
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Database backups and local data
+
+*.sql
+*.dump
+*.bak
+*.sqlite
+*.sqlite3
+
+# Gradle caches and generated files
+
+.gradle/
+.gradle-codex/
+
+# Flutter generated files and logs
+
+frontend/.dart_tool/
+frontend/build/
+frontend/flutter_*.log
+frontend/analyze.txt
+frontend/frontend.iml
+
+# Python generated files and uploads
+
+app/**pycache**/
+app/**/**pycache**/
+app/uploads/
+app/audio/
+
+# Temporary verification scripts
+
+_check_routes.py
+_verify_nav.py
+frontend/_verify_geometry.dart
+
+# Android Gradle build output
+frontend/android/build/

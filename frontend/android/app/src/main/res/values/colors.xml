@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Must match AppTheme.background in lib/core/theme/app_theme.dart.
+      A mismatch here is visible as a colour flash between the native launch
+      window and the first Flutter frame.
+    -->
+    <color name="launch_background">#070A12</color>
+</resources>

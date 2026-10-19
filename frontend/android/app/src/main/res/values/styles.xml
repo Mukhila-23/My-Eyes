@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Dark launch theme for both light and dark system settings.
+
+      My Eyes is a dark-only, voice-first app for blind users, so the launch
+      window must be dark unconditionally. Using Theme.Light.NoTitleBar here
+      produced a bright white window behind the dark splash, which is
+      especially jarring for a low-vision user.
+
+      windowBackground is the launch drawable (a solid #070A12 layer list) rather
+      than ?android:colorBackground, so the first frame and the launch window
+      are guaranteed to be the same colour.
+    -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackgroundFallback">@color/launch_background</item>
+    </style>
+
+    <!--
+      NormalTheme sits behind the running Flutter UI. It must also be dark, or
+      a light window shows through on rotation, in split screen, and behind any
+      transient system dialog.
+    -->
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@color/launch_background</item>
+    </style>
+</resources>

@@ -1,0 +1,42 @@
+fastapi
+uvicorn
+sqlalchemy
+# Alembic is the project's migration system (alembic.ini + alembic/versions).
+# It was missing here even though the migration chain already existed.
+alembic
+# SQLAlchemy's current PostgreSQL dialect uses psycopg (v3).  Keep the
+# binary distribution so a Windows development setup does not need a C
+# compiler or PostgreSQL headers.
+psycopg[binary]
+python-dotenv
+google-auth>=2.0
+
+opencv-python
+ultralytics
+easyocr
+numpy
+pillow
+
+python-multipart
+
+passlib[bcrypt]
+python-jose[cryptography]
+# PasswordHash.recommended() in app/security.py selects Argon2.
+pwdlib[argon2]
+
+pydantic
+email-validator
+
+gtts
+
+# AI Help uses the Gemini API through Google's current official Python SDK
+# (google-genai, client.models.generate_content). This replaces the previous
+# OpenAI dependency, which AI Help no longer uses.
+google-genai>=1.0
+python-dotenv
+
+# Smart Navigation calls Geoapify (Geocoding / Places / Routing) from the
+# FastAPI backend with httpx.AsyncClient so the async router never blocks
+# the event loop. google-genai also needs httpx, but the navigation code
+# imports it directly, so it stays an explicit dependency.
+httpx>=0.27
